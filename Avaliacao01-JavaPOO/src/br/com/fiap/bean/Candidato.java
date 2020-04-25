@@ -58,6 +58,7 @@ public class Candidato {
 		System.out.println("Email: ");
 		this.email = scan.nextLine();
 		System.out.println("");
+		
 	}
 
 	public void exibirDados() {
