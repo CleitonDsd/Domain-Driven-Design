@@ -2,6 +2,8 @@ package br.com.fiap.tds.data.bean;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class Data {
 
 	private int dia;
@@ -46,9 +48,8 @@ public class Data {
 	public void setAno(int ano) {
 		this.ano = ano;
 	}
-	
-	
-	//Validar DIA
+
+	// Validar DIA
 	public void lerDia() {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Digite o dia: ");
@@ -64,14 +65,15 @@ public class Data {
 			return this.dia;
 		}
 	}
-	
-	//Validar MÊS
+
+	// Validar MÊS
 	public void lerMes() {
 
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Digite o Mês: ");
 		this.mes = scan.nextInt();
 	}
+
 	public int validarMes(int mes) {
 		this.mes = mes;
 		if ((this.mes < 1) || (this.mes > 12)) {
@@ -82,8 +84,8 @@ public class Data {
 		}
 
 	}
-	
-	//Validar ANO
+
+	// Validar ANO
 	public void lerAno() {
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Digite o Ano: ");
@@ -106,9 +108,10 @@ public class Data {
 		return data;
 	}
 	
+
 	public void retornarNomeMes(int mes) {
 		this.mes = mes;
-		
+
 		switch (this.mes) {
 		case 1:
 			System.out.println("Janeiro");
@@ -143,13 +146,13 @@ public class Data {
 		case 11:
 			System.out.println("Novembro");
 			break;
-			
+
 		case 12:
 			System.out.println("Dezembro");
-						
+
 		default:
 			System.out.println("Mês inválido");
-			break;
+
 		}
 	}
 
