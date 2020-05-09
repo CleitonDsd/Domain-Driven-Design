@@ -18,6 +18,15 @@ public class ExemploStrings {
 		
 		JOptionPane.showMessageDialog(null, nome);
 		
+		
+		String facul = new String ("FIAP");
+		String facu2 = "FIAP";
+		
+		if (facul.equals(facu2)) {
+			JOptionPane.showMessageDialog(null, "String iguais");
+		}else {
+			JOptionPane.showMessageDialog(null, "Strings diferentes");
+		}
 	}
 
 }
