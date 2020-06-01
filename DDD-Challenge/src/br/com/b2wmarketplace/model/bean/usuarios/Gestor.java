@@ -1,59 +1,34 @@
-package br.com.bw2marketplace.model.bean.usuarios;
-
-import br.com.bw2marketplace.model.bean.escolaridade.Escola;
-import br.com.bw2marketplace.model.bean.escolaridade.Faculdade;
+package br.com.b2wmarketplace.model.bean.usuarios;
 
 public class Gestor extends Usuario {
 
-	private long idGestor;
-	Escola escola;
-	Faculdade faculdade;
-	private String area;
-	private String cargo;
-	private String senioridade; // nível
+	private String setor;
+
+	public String toString() {
+		return "\n Nome: " + nome + "\n Área: " + setor;
+	}
 
 	public Gestor() {
 
 	}
 
-	public Gestor(long idGestor, String area, String cargo, String senioridade) {
-		super();
-		this.idGestor = idGestor;
-		this.area = area;
-		this.cargo = cargo;
-		this.senioridade = senioridade;
+	public Gestor(String setor, String nome) {
+		super(nome);
+		this.setor = setor;
 	}
 
-	public long getIdGestor() {
-		return idGestor;
+	public Gestor(String nome, String data, String numeroCpf, String numeroRg, char sexo, String etnia,
+			String estadoCivil, String email, String setor) {
+		super(nome, data, numeroCpf, numeroRg, sexo, etnia, estadoCivil, email);
+		this.setor = setor;
 	}
 
-	public void setIdGestor(long idGestor) {
-		this.idGestor = idGestor;
+	public String getSetor() {
+		return setor;
 	}
 
-	public String getArea() {
-		return area;
-	}
-
-	public void setArea(String area) {
-		this.area = area;
-	}
-
-	public String getCargo() {
-		return cargo;
-	}
-
-	public void setCargo(String cargo) {
-		this.cargo = cargo;
-	}
-
-	public String getSenioridade() {
-		return senioridade;
-	}
-
-	public void setSenioridade(String senioridade) {
-		this.senioridade = senioridade;
+	public void setSetor(String setor) {
+		this.setor = setor;
 	}
 
 }

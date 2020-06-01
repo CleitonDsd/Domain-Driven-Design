@@ -1,57 +1,51 @@
-package br.com.bw2marketplace.model.bean.usuarios;
+package br.com.b2wmarketplace.model.bean.usuarios;
 
-import br.com.bw2marketplace.model.bean.escolaridade.Escola;
-import br.com.bw2marketplace.model.bean.escolaridade.Faculdade;
+import br.com.b2wmarketplace.model.bean.escolaridade.InformacoesAcademicas;
 
-public class Candidato {
+public class Candidato extends Usuario {
 
-	private long idCandidato;
-	Escola escola;
-	Faculdade faculdade;
-	private String descricaoObjetivoProfissional;
+	private String objetivoProfissional;
+	private String idiomas;
+	private InformacoesAcademicas infoAcademica;
+
+	public String toString() {
+		return super.toString() + "\n Objetivo pessoal: " + objetivoProfissional + "\n Idiomas: " + idiomas;
+	}
 
 	public Candidato() {
 
 	}
 
-	public Candidato(long idCandidato, Escola escola, Faculdade faculdade, String descricaoObjetivoProfissional) {
-		super();
-		this.idCandidato = idCandidato;
-		this.escola = escola;
-		this.faculdade = faculdade;
-		this.descricaoObjetivoProfissional = descricaoObjetivoProfissional;
-	}
-
-	public long getIdCandidato() {
-		return idCandidato;
-	}
-
-	public void setIdCandidato(long idCandidato) {
-		this.idCandidato = idCandidato;
-	}
-
-	public Escola getEscola() {
-		return escola;
-	}
-
-	public void setEscola(Escola escola) {
-		this.escola = escola;
-	}
-
-	public Faculdade getFaculdade() {
-		return faculdade;
-	}
-
-	public void setFaculdade(Faculdade faculdade) {
-		this.faculdade = faculdade;
+	public Candidato(String nome, String data, String numeroCpf, String numeroRg, char sexo, String etnia,
+			String estadoCivil, String email, String objetivoProfissional, String idiomas,
+			InformacoesAcademicas infoAcademica) {
+		super(nome, data, numeroCpf, numeroRg, sexo, etnia, estadoCivil, email);
+		this.objetivoProfissional = objetivoProfissional;
+		this.idiomas = idiomas;
+		this.infoAcademica = infoAcademica;
 	}
 
 	public String getDescricaoObjetivoProfissional() {
-		return descricaoObjetivoProfissional;
+		return objetivoProfissional;
 	}
 
-	public void setDescricaoObjetivoProfissional(String descricaoObjetivoProfissional) {
-		this.descricaoObjetivoProfissional = descricaoObjetivoProfissional;
+	public void setDescricaoObjetivoProfissional(String objetivoProfissional) {
+		this.objetivoProfissional = objetivoProfissional;
 	}
 
+	public String getIdiomas() {
+		return idiomas;
+	}
+
+	public void setIdiomas(String idiomas) {
+		this.idiomas = idiomas;
+	}
+
+	public InformacoesAcademicas getInfoAcademica() {
+		return infoAcademica;
+	}
+
+	public void setInfoAcademica(InformacoesAcademicas infoAcademica) {
+		this.infoAcademica = infoAcademica;
+	}
 }

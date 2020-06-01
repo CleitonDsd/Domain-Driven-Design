@@ -1,20 +1,32 @@
-package br.com.bw2marketplace.model.bean.usuarios;
+package br.com.b2wmarketplace.model.bean.usuarios;
 
 public class Usuario {
 
-	private String nome;
+	protected String nome;
 	private String data;
-	private int numeroCpf;
-	private int numeroRg;
+	private String numeroCpf;
+	private String numeroRg;
 	private char sexo;
 	private String etnia;
 	private String estadoCivil;
+	private String email;
+
+	public String toString() {
+		return "\n Nome: " + nome + "\n Nascimento: " + data + "\n CPF: " + numeroCpf + "\n RG: " + numeroRg
+				+ "\n Gênero: " + sexo + "\n Etnia: " + etnia + "\n Estado civil: " + estadoCivil + "\n Email: "
+				+ email;
+	}
 
 	public Usuario() {
 
 	}
 
-	public Usuario(String nome, String data, int numeroCpf, int numeroRg, char sexo, String etnia, String estadoCivil) {
+	public Usuario(String nome) {
+		this.nome = nome;
+	}
+
+	public Usuario(String nome, String data, String numeroCpf, String numeroRg, char sexo, String etnia,
+			String estadoCivil, String email) {
 		super();
 		this.nome = nome;
 		this.data = data;
@@ -23,6 +35,7 @@ public class Usuario {
 		this.sexo = sexo;
 		this.etnia = etnia;
 		this.estadoCivil = estadoCivil;
+		this.email = email;
 	}
 
 	public String getNome() {
@@ -41,19 +54,19 @@ public class Usuario {
 		this.data = data;
 	}
 
-	public int getNumeroCpf() {
+	public String getNumeroCpf() {
 		return numeroCpf;
 	}
 
-	public void setNumeroCpf(int numeroCpf) {
+	public void setNumeroCpf(String numeroCpf) {
 		this.numeroCpf = numeroCpf;
 	}
 
-	public int getNumeroRg() {
+	public String getNumeroRg() {
 		return numeroRg;
 	}
 
-	public void setNumeroRg(int numeroRg) {
+	public void setNumeroRg(String numeroRg) {
 		this.numeroRg = numeroRg;
 	}
 
@@ -79,6 +92,14 @@ public class Usuario {
 
 	public void setEstadoCivil(String estadoCivil) {
 		this.estadoCivil = estadoCivil;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }
