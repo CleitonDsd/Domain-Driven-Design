@@ -8,6 +8,14 @@ public class Telefone {
 	private String ddd;
 	private String numero;
 
+	public void cadastrarTelefone(String tipo, String ddd, String numero) {
+
+		this.tipo = tipo;
+		this.ddd = ddd;
+		this.numero = numero;
+	}
+	
+	
 	public String getTipo() {
 		return tipo;
 	}
