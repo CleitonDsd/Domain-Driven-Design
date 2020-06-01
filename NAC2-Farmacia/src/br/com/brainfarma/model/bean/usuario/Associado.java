@@ -3,9 +3,9 @@ package br.com.brainfarma.model.bean.usuario;
 public class Associado {
 
 	private long id;
-	private String nome;
-	private String email;
-	private String CPF;
+	protected String nome;
+	protected String email;
+	protected String CPF;
 	private Telefone[] telefones;
 
 	public Associado() {
@@ -17,7 +17,7 @@ public class Associado {
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
-		CPF = CPF;
+		this.CPF = CPF;
 		this.telefones = telefones;
 	}
 
