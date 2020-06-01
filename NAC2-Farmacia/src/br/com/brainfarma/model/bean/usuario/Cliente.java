@@ -16,7 +16,12 @@ public class Cliente extends Associado {
 	// Imprimir usuários
 	@Override
 	public String toString() {
-		return "= = = = = = = = = = = = \n" + super.toString();
+		return "= = = = = = = = = = = = \n"
+				+ "\nNome: " + nome 
+				+ "\nCPF: " + CPF
+				+ "\nE-mail: " + email
+				+ "\nDeseja Receber Ofertas: " + desejaReceberOfertas
+				+ "\n===================" + "\n Telefone: ";
 
 	}
 
