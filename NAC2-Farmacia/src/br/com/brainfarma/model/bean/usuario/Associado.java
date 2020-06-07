@@ -22,10 +22,11 @@ public class Associado {
 	}
 
 	// Imprimir usuários
-	@Override
-	public String toString() {
-		return "= = = = = = = = = = = = \n" + super.toString() + "\nNome: " + nome + "\nMarca: " + email
-				+ "\nPreço(R$): " + CPF + "\nTipo do Produto: " + telefones + "\n= = = = = = = = = = =  = ";
+	public String imprimirDados() {
+		return "\nNome: " + nome +
+				"\nE-mail: " + email +
+				"\nCPF: " + CPF +
+				"\nTelefone(s): " + telefones;
 	}
 
 	public long getId() {

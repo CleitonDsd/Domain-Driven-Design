@@ -1,13 +1,15 @@
-package br.com.brainfarma.model.bean.usuario;
+ package br.com.brainfarma.model.bean.usuario;
 
 public class Cliente extends Associado {
 
 	private boolean desejaReceberOfertas;
-
+	
+	//construtor padrão
 	public Cliente() {
 
 	}
-
+	
+	//construtor com todos atributos
 	public Cliente(boolean desejaReceberOfertas) {
 		super();
 		this.desejaReceberOfertas = desejaReceberOfertas;
