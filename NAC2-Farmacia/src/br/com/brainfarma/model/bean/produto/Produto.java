@@ -8,11 +8,12 @@ public class Produto { // abstract
 	private double valorUnitario;
 	private int quantidade;
 	private String tipoProduto;
-
+	
+	//construtor padrão
 	public Produto() {
 
 	}
-
+	//construtor com todos atributos
 	public Produto(long codigoProduto, String nome, String marca, double valorUnitario, int quantidade,
 			String tipoProduto) {
 		super();
