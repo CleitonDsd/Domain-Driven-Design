@@ -14,7 +14,8 @@ public class CalculadoraFinanceira {
 	public double calcularJurosCompostos(double capital, double taxaJuros, double periodo) {
 
 		double montante = capital * (1 + taxaJuros);
-		return Math.pow(montante, periodo);
+		double resultado = Math.pow(montante, periodo);
+		return resultado;
 
 	}
 }
